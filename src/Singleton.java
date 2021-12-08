@@ -1,11 +1,10 @@
 public class Singleton {
-    private static A obj=new A();//Early, instance will be created at load time
-    private void A(){}
+    private static Singleton obj=new Singleton();//Early, instance will be created at load time
+    private void Singleton(){}
 
-    public static A getA(){
+    public static Singleton getA(){
         return obj;
     }
-
     public void doSomething(){
         //write your code
     }
