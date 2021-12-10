@@ -1,8 +1,6 @@
 //Changing the behaviour at runtime
 // Java program to demonstrate implementation of
 // Strategy Pattern
-
-// Abstract as you must have a specific fighter
 abstract class Fighter
 {
     KickBehavior kickBehavior;
@@ -25,7 +23,6 @@ abstract class Fighter
     }
     public void jump()
     {
-
         // delegate to jump behavior
         jumpBehavior.jump();
     }
@@ -47,7 +44,7 @@ abstract class Fighter
 // Encapsulated kick behaviors
 interface KickBehavior
 {
-    public void kick();
+    void kick();
 }
 class LightningKick implements KickBehavior
 {
@@ -127,17 +124,11 @@ public class StrategyPattern {
         JumpBehavior LongJump = new LongJump();
         KickBehavior tornadoKick = new TornadoKick();
 
-        // Make a fighter with desired behaviors
         Fighter ken = new Ken(tornadoKick,shortJump);
         ken.display();
-
-        // Test behaviors
         ken.punch();
         ken.kick();
         ken.jump();
-
-        // Change behavior dynamically (algorithms are
-        // interchangeable)
         ken.setJumpBehavior(LongJump);
         ken.jump();
     }
