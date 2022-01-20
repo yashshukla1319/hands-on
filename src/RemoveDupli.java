@@ -10,7 +10,7 @@ public class RemoveDupli {
         while (i < nodupli.length) {
             int a = arr[i],b = arr[i+1];
                 if (a != b) {
-                    nodupli[i] = a;
+                    nodupli[++j] = a;
                 }
                 i++;
         }
