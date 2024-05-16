@@ -6,6 +6,6 @@ public class factorial {
         return n*fact(n-1);
     }
     public static void main(String[] args){
-        System.out.println(""+fact(1));
+        System.out.println(""+fact(5));
     }
 }

@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Armstrong {
-    static boolean chech(int n) {
+    static boolean check(int n) {
         int temp, digits = 0, sum = 0, last;
         temp = n;
         while (temp > 0) {
@@ -24,7 +24,7 @@ public class Armstrong {
             Scanner sc= new Scanner(System.in);
             System.out.print("Enter the number: ");
             num=sc.nextInt();
-            if(chech(num))
+            if(check(num))
             {
                 System.out.print("Armstrong ");
             }

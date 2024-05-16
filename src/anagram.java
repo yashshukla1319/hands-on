@@ -3,11 +3,11 @@ import java.util.Scanner;
 
 public class anagram {
     static boolean isAnagram(String a, String b) {
-        char[] ArrayS1 = a.toLowerCase().toCharArray();
-        char[] ArrayS2 = b.toLowerCase().toCharArray();
-        Arrays.sort(ArrayS1);
-        Arrays.sort(ArrayS2);
-        boolean status = Arrays.equals(ArrayS1, ArrayS2);
+        char[] arrayS1 = a.toLowerCase().toCharArray();
+        char[] arrayS2 = b.toLowerCase().toCharArray();
+        Arrays.sort(arrayS1);
+        Arrays.sort(arrayS2);
+        boolean status = Arrays.equals(arrayS1, arrayS2);
 
         return status;
     }

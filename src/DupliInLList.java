@@ -7,7 +7,7 @@ public class DupliInLList {
     public static void remove(Node head) {
         Node current = head;
         Node prev = null;
-        HashSet<Integer> hs = new HashSet();
+        HashSet<Integer> hs = new HashSet<>();
         while (current!=null){
             if (hs.contains(current.data)){
                 prev.next = current.next;

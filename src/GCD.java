@@ -3,7 +3,7 @@ public class GCD {
         if (b==0){
             return a;
         }
-        return count(a,a%b);
+        return count(b,a%b);
     }
     public static void main(String[] args)
     {
