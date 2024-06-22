@@ -5,15 +5,16 @@ public class PassByValue {
         int x = 10;
 
         System.out.println("Before: " + x);
-        x = 20;
+        //x = 20;
         changeValue(x);
         System.out.println("After: " + x);
 
     }
 
     public static void changeValue(int arr) {
+        System.out.println("Arr before: " + arr);
         arr = 20;
-        System.out.println("Arr: "+arr);
+        System.out.println("Arr: " + arr);
     }
-        //Arrays.stream(arr).collect();
+    //Arrays.stream(arr).collect();
 }
