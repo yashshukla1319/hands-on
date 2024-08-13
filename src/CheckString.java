@@ -7,6 +7,8 @@ public class CheckString {
         String matcher = "//.*[0-9].*";
         //Pattern pattern = Pattern.compile(matcher);
         String val = "123";
+        StringBuilder sb = new StringBuilder(val);// + val;
+        sb.append(val);
         System.out.println(Pattern.matches(matcher,val));
     }
 }

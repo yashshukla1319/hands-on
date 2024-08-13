@@ -14,6 +14,9 @@ public class CountNumbers {
         strings.add(0);
         strings.add(0);
 
+        int min = strings.stream().min(Integer::compareTo).orElse(0);
+        System.out.println("Min: "+min);
+
         //List<String> string =
         //Map<Integer, List<Integer>> collect = strings.stream().distinct().collect(Collectors.counting());
         Integer collectOne = strings.stream().reduce(0, Integer::sum);
