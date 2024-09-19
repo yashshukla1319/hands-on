@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class CountNumbers {
@@ -50,6 +49,8 @@ public class CountNumbers {
                         Character::charValue, // Group by character
                         Collectors.counting() // Count occurrences
                 ));
+
+        System.out.println("Char Map: "+characterCounts2);
 
         List<String> list = List.of("abc", "abc", "pqr");
 

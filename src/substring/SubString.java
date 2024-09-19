@@ -1,11 +1,14 @@
 package substring;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class SubString {
     public static void main(String[] args) {
-        int longestSubstring = lengthOfLongestSubstring("abcdab");
+        //int longestSubstring = lengthOfLongestSubstring("abcdab");
+        int longestSubstring = lengthOfLongestSubstring("geeksforgeeks");
         System.out.println("Longest substring:" + longestSubstring);
     }
 
@@ -25,6 +28,7 @@ public class SubString {
         }
 
         System.out.println(strSub);
+        System.out.println("Sorted: "+strSub.stream().sorted(Comparator.comparing(String::length).reversed()).collect(Collectors.toList()));
         return strSub.stream().mapToInt(String::length).max().orElse(0);
         //return 0;
     }
